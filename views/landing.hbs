@@ -1,0 +1,117 @@
+
+<div id="wrapper" class="wrapper landing">
+    <!-- BEGIN SEARCH -->
+    <div class="site-search">
+        <div class="site-search-inner">
+            <div class="container">
+                <form class="site-search-form">
+                    <h2>Looking for something?</h2>
+                    <div class="input-group">
+                        <input class="form-control" type="search" required>
+                        <span class="input-group-btn">
+                              <button type="submit" class="btn btn-primary">Search</button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <button type="button" class="site-search-close-btn">×</button>
+    </div>
+    <!-- END SEARCH -->
+
+    <!-- BEGIN MAIN CONTENT -->
+    <main class="site-content">
+
+<div class="slideshow owl-carousel" data-slideshow-settings='{"animateOut":"fadeOut","animateIn":"fadeIn", "autoplay": false}'>
+<div class="slideshow-item slideshow-item-1">
+<div class="slideshow-item-bg"></div>
+<div class="slideshow-item-inner">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col col-lg-8 col-lg-offset-2">
+        <h2 class="title animated fadeInRightSmall">Heritage</h2>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="container ">
+  <header class="heading text-center">
+    <p>How We are helping</p>
+    <h2>Featured Campaigns</h2>
+  </header>
+
+  <div class="owl-carousel posts" data-slideshow-settings='{"responsive":{"0":{"items":1}, "767":{"items":2}, "992":{"items":2}, "1200":{"items":3}}, "margin":15, "dots":false}'>
+    {{#each campaigns}}
+
+    <div class="post post-card">
+      <header class="post-header">
+        <div class="post-thumb">
+          <a href="/campaigns/{{this._id}}">
+            {{#if this.image}}
+              <img src="public/uploads/{{this.image}}.jpg" width="800" height="600" alt="">
+            {{/if}}
+          </a>
+        </div>
+      </header>
+      <div class="post-entry">
+        <h3>
+          <a href="/campaigns/{{this._id}}">{{this.name}}</a>
+        </h3>
+      </div>
+    </div>
+    {{/each}}
+
+  </div>
+  <div class="text-center">
+    <a href="/campaigns" class="btn btn-sm btn-default">All Campaigns</a>
+  </div>
+</div>
+
+
+<div class="container">
+  <header class="heading text-center">
+  <p>Who We are helping</p>
+  <h2>Featured Charities</h2>
+  </header>
+
+  <div class="owl-carousel posts" data-slideshow-settings='{"responsive":{"0":{"items":1}, "767":{"items":2}, "992":{"items":2}, "1200":{"items":3}}, "margin":15, "dots":false}'>
+
+   {{#each charities}}
+
+  <div class="post post-card">
+    <header class="post-header">
+      <div class="post-thumb">
+        <a href="/charities/{{this._id}}">
+          <img src="public/images/{{this.identifier}}/cause-photo.jpg" width="800" height="600" alt="">
+        </a>
+      </div>
+    </header>
+    <div class="post-entry">
+      <h3>
+        <a href="/charities/{{this._id}}">{{this.name}}</a>
+      </h3>
+      <p>{{this.shortDescription}}</p>
+      <div class="text-center">
+
+        <a href="/charities/{{this._id}}" class="btn btn-default">Learn More</a>
+
+      </div>
+    </div>
+  </div>
+
+  {{/each}}
+</div>
+<div class="text-center">
+<a href="/charities" class="btn btn-sm btn-default">All Charities</a>
+</div>
+</div>
+
+
+
+    </main>
+    <!-- END MAIN CONTENT -->
+</div>
+</div>

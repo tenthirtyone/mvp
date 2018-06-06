@@ -1,0 +1,132 @@
+<!-- BEGIN MAIN CONTENT -->
+<main class="site-content campaign-page">
+
+<div class="container no-top-padding campaigns">
+	<div class="post">
+		<header class="post-header">
+			<h1>{{campaign.name}}</h1>
+		</header>
+		<div class="row">
+			<div class="col col-lg-9 col-md-9">
+				<header class="secondary-post-header">
+					<div class="post-thumb">
+						<img src="/public/uploads/{{campaign.image}}.jpg" width="1000" height="550" alt="">
+					</div>
+
+				</header>
+				<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active">
+						<a href="#description" aria-controls="description" role="tab" data-toggle="tab">Description</a>
+					</li>
+				</ul>
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="description">
+						<div class="post-entry">
+							{{#if campaign.youtube}}
+								<iframe width="560" height="315" src="{{campaign.youtube}}" frameborder="0" allow="autoplay; encrypted-media"
+								 allowfullscreen></iframe>
+							{{/if}}
+							{{{campaign.description}}}
+
+							<div class="campaign-tokens" data-crypto-id="{{campaign.cryptoId}}">
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<hr>
+				<footer class="entry-footer">
+					<div class="row">
+						<div class="col col-lg-6">
+
+						</div>
+						<div class="col col-lg-6">
+						</div>
+					</div>
+				</footer>
+			</div>
+			<div class="col col-lg-3 col-md-3">
+				<div class="post-details">
+					<div class="post-details-item">
+						<h3>Pledges</h3>
+						<p>{{totalPledges}}</p>
+					</div>
+					<div class="post-details-item">
+						<h3>Pledged</h3>
+						<p>${{totalPledged}} per {{measureSingular}}</p>
+					</div>
+					<div class="post-details-item">
+						<h3>Goal</h3>
+						<p>{{campaign.goal}} {{campaign.measure}}</p>
+					</div>
+					{{#if totalRaised}}
+					<div class="post-details-item">
+						<h3>Raised</h3>
+						<p>{{totalRaised}}</p>
+					</div>
+					{{/if}}
+					<h3>Cause creator</h3>
+					<div class="post-author">
+						<b>{{campaign.employee}}</b>
+					</div>
+
+						{{#unless campaign.complete}}
+							<button class="btn btn-primary btn-block btn-pledge">Pledge USD</button>
+						{{/unless}}
+					<hr>
+					{{#each pledges}}
+					<h3>${{this.amount}} to {{this.charityName}}</h3>
+					<div class="post-author">
+						<b>{{this.email}}</b>
+					</div>
+					{{/each}}
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+</div>
+
+<div class="modal fade bs-example-modal-sm modal-pledge" tabindex="-1" role="dialog" aria-labelledby="modal">
+	<div class="modal-dialog modal-md" role="document">
+		<div class="modal-content">
+			<div class="form-group">
+				<label for="name">Select a Charity</label>
+				<img class="pledge-img" src="/public/images/cause-photo-1.jpg">
+				<div class="row">
+
+					<div class="row">
+						<div class="col-12 msg-row">
+							<label for="msg">Personal Message</label>
+							<input type="text" class="form-control pledge-msg" placeholder="'Good Job'" name="msg">
+						</div>
+					</div>
+					<div class="row">
+						<input type="number" class="form-control amount" name="amount" value="1" step="1">
+					</div>
+					<div class="row button-row">
+
+						<button type="button" role="presentation" class="nav-button left">
+							<i class="fa fa-chevron-left" aria-hidden="true"></i>
+						</button>
+						<button class="btn btn-primary btn-block pledge" data-campaign-id="{{campaign._id}}">Make Pledge</button>
+						<button type="button" role="presentation" class="nav-button right">
+							<i class="fa fa-chevron-right" aria-hidden="true"></i>
+						</button>
+
+					</div>
+
+
+					<button class="btn btn-primary btn-block donate">Make Donation</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</main>
+<!-- END MAIN CONTENT -->

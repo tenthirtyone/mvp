@@ -1,0 +1,13 @@
+.campaigns-view {
+  .panel_header {
+    .title {
+      &.pull-right {
+        padding-right: 2rem;
+        padding-left: 0;
+      }
+    }
+  }
+  .pagination {
+    width: 100%;
+  }
+}

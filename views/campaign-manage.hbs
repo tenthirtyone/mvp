@@ -1,0 +1,158 @@
+<section id="main-content" class="campaigns-manage">
+    <div class="wrapper main-wrapper row" style=''>
+
+        <div class='col-xs-12'>
+            <div class="page-title">
+                <div class="pull-left">
+                    <!-- PAGE HEADING TAG - START -->
+                    <h1 class="title">Campaigns</h1>
+                    <!-- PAGE HEADING TAG - END -->
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <!-- MAIN CONTENT AREA STARTS -->
+
+        <div class="col-12">
+            <section class="box" style="border-left: 3px solid #e77512;">
+                <header class="panel_header">
+                    <h2 class="title pull-left">Manage Campaigns</h2>
+                    <h2 class="title pull-right">{{totalCampaigns}} Campaigns</h2>
+                </header>
+                <div class="content-body">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="table-responsive" data-pattern="priority-columns">
+                                <table id="tech-companies-1" class="table table-small-font no-mb table-bordered table-striped manage-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Campaign Name</th>
+                                            <th>Edit</th>
+                                            <th>Status</th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                    </thead>
+                                    <tbody>
+                                        {{#each campaigns}}
+                                        <tr>
+                                            <td>
+                                                {{this.name}}
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-primary btn-edit" data-campaign-id="{{this._id}}">Edit</button>
+                                            </td>
+                                            <td>
+                                                {{#if this.complete}}
+                                                <span class="">complete</span>
+                                                {{else if this.cancelled}}
+                                                    <span class="">cancelled</span>
+                                                {{else if this.active}}
+                                                    <span class="">active</span>
+                                                {{else}}
+                                                    <span class="">pending</span>
+                                                {{/if}}
+                                            </td>
+
+                                            <td>
+                                                {{#unless this.cancelled}}
+                                                    {{#unless this.complete}}
+                                                        {{#if this.active}}
+                                                            <button class="btn btn-primary btn-{{../type}}-complete" data-campaign-id="{{this._id}}">Complete</button>
+                                                        {{/if}}
+                                                    {{/unless}}
+                                                {{/unless}}
+                                            </td>
+                                            <td>
+                                                {{#unless this.cancelled}}
+                                                    {{#unless this.complete}}
+                                                        {{#if this.active}}
+                                                            <button class="btn btn-primary btn-{{../type}}-notify" data-campaign-id="{{this._id}}">Notify</button>
+                                                        {{/if}}
+                                                    {{/unless}}
+                                                {{/unless}}
+                                            </td>
+                                            {{#unless this.complete}}>
+                                                <td>
+                                                    {{#unless this.cancelled}}
+                                                        {{#unless this.active}}
+                                                            <button class="btn btn-primary btn-{{../type}}-activate" data-campaign-id="{{this._id}}">Activate</button>
+                                                        {{/unless}}
+                                                    {{/unless}}
+                                                </td>
+                                                <td>
+                                                    {{#unless this.cancelled}}
+                                                        <button class="btn btn-primary btn-{{../type}}-cancel" data-campaign-id="{{this._id}}">Cancel</button>
+                                                    {{/unless}}
+                                                </td>
+                                                <td>
+                                                    {{#if ../isUSD}}
+                                                        {{#if this.active}}
+                                                            <button class="btn btn-primary" data-campaign-id="{{this._id}}" data-toggle="modal" href="#cmpltadminModal-1">Add Crypto</button>
+                                                        {{/if}}
+                                                    {{/if}}
+                                                </td>
+                                            {{else}}
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            {{/unless}}
+                                        </tr>
+                                        {{/each}}
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="dataTables_paginate paging_simple_numbers">
+                                <ul class="pagination">
+                                    <li class="paginate_button page-item previous ">
+                                        <a href="/admin/campaigns/USD/manage?page={{prevPageNumber}}" aria-controls="MCCLMC-crypto-data-list" data-dt-idx="0" tabindex="0" class="page-link">Previous</a>
+                                    </li>
+                                    <li class="paginate_button page-item next pull-right ">
+                                        <a href="/admin/campaigns/USD/manage?page={{nextPageNumber}}" aria-controls="MCCLMC-crypto-data-list" data-dt-idx="8" tabindex="0" class="page-link">Next</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- MAIN CONTENT AREA ENDS -->
+    </div>
+
+<div class="modal fade col-xs-12" id="cmpltadminModal-1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <section class="box" style="border-left: 3px solid #e77512;">
+
+                <header class="panel_header">
+                    <h2 class="title pull-left">Add Crypto to Fundraiser</h2>
+                    <button type="button" class="close pull-right" data-dismiss="modal" aria-hidden="true">×</button>
+
+                </header>
+                <div class="content-body">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="table-responsive" data-pattern="priority-columns">
+                                <table class="table table-small-font no-mb table-bordered table-striped campaign-table">
+                                    <thead>
+                                        <tr>
+                                            <th>ID | Campaign Name</th>
+                                            <th>Add Crypto</th>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+</section>

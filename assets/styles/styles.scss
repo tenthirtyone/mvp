@@ -1,0 +1,21 @@
+@import 'plugins';
+@import 'template';
+@import 'login';
+@import 'landing';
+@import 'currency-info';
+@import 'header';
+@import 'campaigns';
+@import 'campaign-page';
+@import 'charities-landing';
+@import 'guide';
+@import 'mydonations';
+@import 'pending';
+@import 'statistics';
+
+
+.single-post-card {
+  width: 370px;
+  display: inline-block;
+  margin: .5rem;
+  padding: .5rem;
+}

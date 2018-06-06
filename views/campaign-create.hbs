@@ -1,0 +1,103 @@
+<section id="main-content" class="campaigns-create">
+            <div class="wrapper main-wrapper row" style=''>
+
+                <div class='col-xs-12'>
+                    <div class="page-title">
+                        <div class="pull-left">
+                            <!-- PAGE HEADING TAG - START -->
+                            <h1 class="title">Campaigns</h1>
+                            <!-- PAGE HEADING TAG - END -->
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <!-- MAIN CONTENT AREA STARTS -->
+
+<div class="col-12">
+    <section class="box" style="border-left: 3px solid #e77512;">
+        <header class="panel_header">
+            <h2 class="title pull-left">Create Campaign</h2>
+        </header>
+        <section class="box ">
+            <div class="content-body">
+                <div class="row">
+                    <div class="col-md-8 col-sm-9 col-xs-10">
+                        <img class="mini-image">
+                        <form enctype="multipart/form-data">
+                            <label class="form-label" for="file-1">Campaign Image (1000px x 550px)</label>
+                            <input name="file" type="file" uid="file-1" />
+                            <progress></progress>
+                            </br>
+                        </form>
+                        </br>
+                        </br>
+                        <form id="CreateCampaign">
+                            <input class="image1" type="text" name="image1" hidden/>
+                            <div class="form-group">
+                                <label class="form-label" for="field-1">Campaign Name</label>
+                                <div class="controls">
+                                    <input type="text" class="form-control" name="campaignName" placeholder="'Run for the Cure'" id="field-1">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="field-1">Employee Name</label>
+                                <div class="controls">
+                                    <input type="text" class="form-control" name="employeeName" placeholder="Firstname Lastname" id="field-2">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="field-1">Youtube Embedded URL</label>
+                                <div class="controls">
+                                    <input type="text" class="form-control" name="youtube" placeholder="https://www.youtube.com/embed/V1P97VVt6_k">
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="form-label" for="field-6">Campaign Description</label>
+                                <span class="desc"></span>
+                                <div class="controls">
+                                    <textarea class="form-control" name="campaignDescription" placeholder="" cols="5"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="field-1">Crypto Campaign Id</label>
+                                <div class="controls">
+                                    <input type="text" class="form-control" name="cryptoId" id="field-4">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="field-1">Measure</label>
+                                <div class="controls">
+                                    <input type="text" class="form-control" name="measure" id="field-4">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="field-1">Goal</label>
+                                <div class="controls">
+                                    <input type="number" class="form-control" name="campaignGoal" id="field-4">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="controls">
+                                    <button class="btn btn-primary btn-{{type}} has-gradient-to-right-bottom" type="button" data-campaign-type="{{type}}" >Create Campaign</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </section>
+</div>
+
+                <!-- MAIN CONTENT AREA ENDS -->
+            </div>
+        </section>

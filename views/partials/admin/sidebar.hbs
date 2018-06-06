@@ -1,0 +1,121 @@
+        <!-- SIDEBAR - START -->
+
+        <div class="page-sidebar fixedscroll">
+
+            <!-- MAIN MENU - START -->
+            <div class="page-sidebar-wrapper" id="main-menu-wrapper">
+                <ul class='wraplist'>
+                    <li class='menusection'>Main</li>
+                    <li {{#if dashboard}}class="open"{{/if}}>
+                        <a href="/admin">
+                            <i class="fa fa-th-large"></i>
+                            <span class="title">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class='menusection'>Pledge Campaigns</li>
+                    <li {{#if usdCreate}}class="open"{{/if}}>
+                        <a href="/admin/campaigns/USD/create">
+                            <i class="fa fa-calendar-o"></i>
+                            <span class="title">Create Campaign</span>
+                        </a>
+                    </li>
+                    <li {{#if usdManage}} class="open" {{/if}}>
+                        <a href="/admin/campaigns/USD/manage">
+                            <i class="fa fa-calendar"></i>
+                            <span class="title">Manage Campaigns</span>
+                        </a>
+                    </li>
+                    <!--
+                    <li class="">
+                        <a href="/admin/campaigns/USD/view">
+                            <i class="fa fa-bullseye"></i>
+                            <span class="title">View Campaigns</span>
+                        </a>
+                    </li>
+                    -->
+                    <li class='menusection'>Cryptocurrency Campaigns</li>
+                    <li {{#if campaignCreateEth}}class="open"{{/if}}>
+                        <a href="/admin/campaigns/ETH/create">
+                            <i class="fa fa-calendar-o"></i>
+                            <span class="title">Create Campaign</span>
+                        </a>
+                    </li>
+                    <li {{#if campaignManageEth}}class="open"{{/if}}>
+                        <a href="/admin/campaigns/ETH/manage">
+                            <i class="fa fa-calendar"></i>
+                            <span class="title">Manage Campaigns</span>
+                        </a>
+                    </li>
+                    <!--
+                    <li class="">
+                        <a href="/admin/campaigns/ETH/view">
+                            <i class="fa fa-bullseye"></i>
+                            <span class="title">View Campaigns</span>
+                        </a>
+                    </li>
+                    -->
+                    <li class='menusection'>Charities</li>
+                    <li {{#if charitiesCreate}}class="open"{{/if}}>
+                        <a href="/admin/charities/create">
+                            <i class="fa fa-flash"></i>
+                            <span class="title">Add Charities</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="/admin/charities/manage">
+                            <i class="fa fa-flash"></i>
+                            <span class="title">Manage Charities</span>
+                        </a>
+                    </li>
+                    <li class='menusection'>Reports</li>
+                    <li class="">
+                        <a href="/admin/reports/platform">
+                            <i class="fa fa-flash"></i>
+                            <span class="title">Platform</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="/admin/reports/campaign">
+                            <i class="fa fa-flash"></i>
+                            <span class="title">Campaign</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="/admin/reports/manager">
+                            <i class="fa fa-sitemap"></i>
+                            <span class="title">Managers</span>
+                        </a>
+                    </li>
+                    <li class='menusection'>Settings</li>
+                    <li class="">
+                        <a href="/admin/settings/general">
+                            <i class="fa fa-user"></i>
+                            <span class="title">General</span>
+                        </a>
+                    </li>
+                    <li {{#if managers}}class="open"{{/if}}>
+                        <a href="/admin/settings/managers">
+                            <i class="fa fa-users"></i>
+                            <span class="title">Campaign Managers</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="/admin/settings/configuration">
+                            <i class="fa fa-user"></i>
+                            <span class="title">Configuration</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="/admin/settings/security">
+                            <i class="fa fa-user"></i>
+                            <span class="title">Security</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+            <!-- MAIN MENU - END -->
+
+        </div>
+        <!--  SIDEBAR - END -->

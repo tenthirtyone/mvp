@@ -1,0 +1,105 @@
+<section id="main-content" class="campaigns-edit">
+    <div class="wrapper main-wrapper row" style=''>
+
+        <div class='col-xs-12'>
+            <div class="page-title">
+                <div class="pull-left">
+                    <!-- PAGE HEADING TAG - START -->
+                    <h1 class="title">Campaigns</h1>
+                    <!-- PAGE HEADING TAG - END -->
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <!-- MAIN CONTENT AREA STARTS -->
+
+        <div class="col-12">
+            <section class="box" style="border-left: 3px solid #e77512;">
+                <header class="panel_header">
+                    <h2 class="title pull-left">Edit Campaign</h2>
+                </header>
+                <section class="box ">
+                    <div class="content-body">
+                        {{#each campaign}}
+                        <div class="row">
+                            <div class="col-md-8 col-sm-9 col-xs-10">
+                                <img class="mini-image" src="/public/uploads/{{this.image}}.jpg">
+                                <form enctype="multipart/form-data">
+                                    <label class="form-label" for="file-1">Campaign Image (1000px x 550px)</label>
+                                    <input name="file" type="file" uid="file-1" />
+                                    <progress></progress>
+                                    </br>
+                                </form>
+                                </br>
+                                </br>
+                                <form id="EditCampaign">
+                                    <input class="image1" type="text" value="{{this.image}}" name="image1" hidden/>
+                                    <div class="form-group">
+                                        <label class="form-label" for="field-1">Campaign Name</label>
+                                        <div class="controls">
+                                             {{this.name}}
+                                            <input type="text" class="form-control" value="{{this.name}}" name="campaignName" placeholder="'Run for the Cure'" id="field-1">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label" for="field-1">Employee Name</label>
+                                        <div class="controls">
+                                            <input type="text" class="form-control" name="employeeName" value="{{this.employee}}" placeholder="Firstname Lastname" id="field-2">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label" for="field-1">Youtube Embedded URL</label>
+                                        <div class="controls">
+                                            <input type="text" class="form-control" name="youtube" value="{{this.youtube}}" placeholder="https://www.youtube.com/embed/V1P97VVt6_k">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label class="form-label" for="field-6">Campaign Description</label>
+                                        <span class="desc"></span>
+                                        <div class="controls">
+                                            <textarea class="form-control" name="campaignDescription" placeholder="" cols="5">{{this.description}}</textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label" for="field-1">Crypto Campaign Id</label>
+                                        <div class="controls">
+                                            <input type="text" class="form-control" name="cryptoId" value="{{this.cryptoId}}" id="field-4">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label" for="field-1">Measure</label>
+                                        <div class="controls">
+                                            <input type="text" class="form-control" name="measure" value="{{this.measure}}" id="field-4">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label" for="field-1">Goal</label>
+                                        <div class="controls">
+                                            <input type="number" class="form-control" name="campaignGoal" value="{{this.goal}}" id="field-4">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="controls">
+                                            <button class="btn btn-primary btn-update-campaign has-gradient-to-right-bottom" type="button"  data-campaign-id="{{this.id}}">Edit Campaign</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                </section>
+            </section>
+        </div>
+
+        <!-- MAIN CONTENT AREA ENDS -->
+    </div>
+</section>

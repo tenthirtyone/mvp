@@ -1,0 +1,52 @@
+.campaigns-eth-manage {
+  display: none;
+
+  #AddTokenData {
+    display: none;
+  }
+
+  .btn-cancel-token-data {
+    margin-right: 1rem;
+  }
+
+  .mini-image {
+    width: 125px;
+  }
+
+  .campaign-table>tbody>tr>td {
+    vertical-align: middle;
+  }
+  .modal-content {
+    background-color: #2f323b;
+    .close {
+      margin: 1rem 1.5rem 0 0;
+      font-size: 2rem;
+      color: #fff;
+    }
+    section {
+      &.box {
+        margin: 0;
+
+        input {
+          color: #000;
+
+          &.token-name {
+
+          }
+          &.token-supply {
+            width: 5rem;
+            text-align: center;
+          }
+          &.token-price {
+            width: 5rem;
+            text-align: center;
+          }
+        }
+
+        .btn-add-token {
+          margin: 1rem 1rem 1rem 0;
+        }
+      }
+    }
+  }
+}

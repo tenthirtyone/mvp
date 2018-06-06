@@ -1,0 +1,14 @@
+.currencyinfo {
+  .form-control {
+    &.amount {
+      text-align: center;
+      font-size: 8rem;
+      padding: 8rem 0rem 8rem 0rem;
+    }    
+  }
+  .post-entry {
+    p {
+      padding: 0 1.4rem;
+    }
+  }
+}

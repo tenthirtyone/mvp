@@ -1,0 +1,37 @@
+   <main class="site-content">
+
+<div class="container no-top-padding">
+	<header class="page-header">
+		<h1>Campaigns</h1>
+	</header>
+	<div class="row grid posts">
+		{{#each campaigns}}
+			<div class="col-lg-6 col-md-6">
+				<a href="/campaigns/{{this._id}}">
+					<div class="post post-card post-event">
+						<header class="post-header">
+							<div class="post-thumb">
+								{{#if this.image}}
+									<img src="public/uploads/{{this.image}}.jpg" width="1000" height="550" alt="">
+								{{else}}
+									<img src="public/images/events-photo-1.jpg" width="1000" height="550" alt="">
+								{{/if}}
+
+							</div>
+							<div class="post-header-inner">
+								<h3>{{ this.name }}</h3>
+								<div class="post-meta">
+
+								</div>
+							</div>
+						</header>
+
+					</div>
+				</a>
+			</div>
+		{{/each}}
+	</div>
+</div>
+
+
+        </main>

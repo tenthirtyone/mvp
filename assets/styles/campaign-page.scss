@@ -1,0 +1,88 @@
+.campaign-page {
+  .btn-pledge-crypto {
+    display: none;
+  }
+
+  .post-entry {
+    p {
+      color: #000;
+    }
+  }
+
+  .modal-content {
+    padding: 1rem;
+    -webkit-box-shadow: 0 2px 3px #cfd7ed;
+
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    label {
+      color: #000;
+    }
+
+    .msg-row {
+      label, input {
+        color: #000;
+        display: block;
+        width: 60%;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+      }
+    }
+
+    button {
+      &.pledge {
+        width: 50%;
+        margin: 0 auto;
+        margin-top: 1rem;
+      }
+    }
+
+    .button-row {
+      text-align: center;
+      button {
+        display: inline;
+      }
+    }
+
+    .nav-button {
+      width: 50px;
+      height: 50px;
+      border: solid #456DC7;
+      background-color: #456DC7;
+      border-radius: 35px;
+      &.left {
+        margin-left: 2rem;
+      }
+      &.right {
+        margin-right: 2rem;
+      }
+      .fa {
+        color: #fff;
+      }
+    }
+    .form-group {
+      padding: 1rem;
+      box-shadow: 0 2px 3px #cfd7ed;
+    }
+    .form-control {
+      &.amount {
+        text-align: center;
+        font-size: 8rem;
+        padding: 6rem 0rem 6rem 0rem;
+        margin: 0 auto;
+        width: 60%;
+      }
+    }
+    .nav-button {
+      color: #456DC7;
+
+    }
+    button {
+      margin-top: 1rem;
+    }
+  }
+}

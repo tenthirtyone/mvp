@@ -1,0 +1,80 @@
+<section id="main-content" class="campaigns-view">
+  <div class="wrapper main-wrapper row" style=''>
+
+    <div class='col-xs-12'>
+      <div class="page-title">
+        <div class="pull-left">
+          <!-- PAGE HEADING TAG - START -->
+          <h1 class="title">Campaigns</h1>
+          <!-- PAGE HEADING TAG - END -->
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <!-- MAIN CONTENT AREA STARTS -->
+
+<div class="col-12">
+  <section class="box" style="border-left: 3px solid #e77512;">
+    <header class="panel_header">
+      <h2 class="title pull-left">Pledge Campaigns</h2>
+      <h2 class="title pull-right">{{totalCampaigns}} Campaigns</h2>
+    </header>
+    <div class="content-body">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="table-responsive" data-pattern="priority-columns">
+            <table id="tech-companies-1" class="table table-small-font no-mb table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>Campaign Name</th>
+                  <th data-priority="1">Employee Name</th>
+                  <th data-priority="3">Status</th>
+                  <th data-priority="1">Goal</th>
+              </thead>
+              <tbody>
+                {{#each campaigns}}
+                <tr>
+                  <th>
+
+                    <i class="fa fa-dot-circle-o pending"></i> {{this.name}}</th>
+                  <td>{{this.employee}}</td>
+                  <td>
+                    {{#if this.cancelled}}
+                      <span class="status-cancelled">cancelled</span>
+                    {{else if this.active}}
+                      <span class="status-complete">complete</span>
+                    {{else}}
+                      <span class="status-pending">pending</span>
+                    {{/if}}
+                  </td>
+                  <td>
+                    {{#if this.goal}}
+                    <i class="fa pending normal"></i>${{this.goal}}
+                    {{/if}}
+                  </td>
+                </tr>
+                {{/each}}
+              </tbody>
+            </table>
+          </div>
+          <div class="dataTables_paginate paging_simple_numbers">
+            <ul class="pagination">
+              <li class="paginate_button page-item previous ">
+                <a href="/admin/campaigns/USD/view?page={{prevPageNumber}}" aria-controls="MCCLMC-crypto-data-list" data-dt-idx="0"
+                  tabindex="0" class="page-link">Previous</a>
+              </li>
+              <li class="paginate_button page-item next pull-right ">
+                <a href="/admin/campaigns/USD/view?page={{nextPageNumber}}" aria-controls="MCCLMC-crypto-data-list" data-dt-idx="8"
+                  tabindex="0" class="page-link">Next</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+    <!-- MAIN CONTENT AREA ENDS -->
+  </div>
+</section>

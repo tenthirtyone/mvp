@@ -1,0 +1,63 @@
+<section id="main-content" class="charities-manage">
+    <div class="wrapper main-wrapper row" style=''>
+
+        <div class='col-xs-12'>
+            <div class="page-title">
+                <div class="pull-left">
+                    <!-- PAGE HEADING TAG - START -->
+                    <h1 class="title">Charities</h1>
+                    <!-- PAGE HEADING TAG - END -->
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <!-- MAIN CONTENT AREA STARTS -->
+
+        <div class="col-12">
+            <section class="box" style="border-left: 3px solid #e77512;">
+                <header class="panel_header">
+                    <h2 class="title pull-left">Manage Charities</h2>
+                    <h2 class="title pull-right">{{totalCampaigns}} Charities</h2>
+                </header>
+                <div class="content-body">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="table-responsive" data-pattern="priority-columns">
+                                <table id="tech-companies-1" class="table table-small-font no-mb table-bordered table-striped manage-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Charity Name</th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                    </thead>
+                                    <tbody>
+                                        {{#each charities}}
+                                        <tr>
+                                            <td>{{this.name}}</td>
+                                            <td><a href="/admin/charities/edit/{{this._id}}"><button class="btn btn-primary">Edit</button></a></td>
+                                            <td></td>
+                                            <td><button class="btn btn-primary btn-delete" data-charity-id="{{this._id}}">Delete</button></td>
+                                        </tr>
+                                        {{/each}}
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="dataTables_paginate paging_simple_numbers">
+                                <ul class="pagination">
+                                    <li class="paginate_button page-item previous ">
+                                        <a href="/admin/campaigns/USD/manage?page={{prevPageNumber}}" aria-controls="MCCLMC-crypto-data-list" data-dt-idx="0" tabindex="0" class="page-link">Previous</a>
+                                    </li>
+                                    <li class="paginate_button page-item next pull-right ">
+                                        <a href="/admin/campaigns/USD/manage?page={{nextPageNumber}}" aria-controls="MCCLMC-crypto-data-list" data-dt-idx="8" tabindex="0" class="page-link">Next</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- MAIN CONTENT AREA ENDS -->
+    </div>
+</section>

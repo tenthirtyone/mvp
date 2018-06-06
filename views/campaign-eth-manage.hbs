@@ -1,0 +1,150 @@
+<section id="main-content" class="campaigns-eth-manage">
+    <div class="wrapper main-wrapper row" style=''>
+
+        <div class='col-xs-12'>
+            <div class="page-title">
+                <div class="pull-left">
+                    <!-- PAGE HEADING TAG - START -->
+                    <h1 class="title">Campaigns</h1>
+                    <!-- PAGE HEADING TAG - END -->
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <!-- MAIN CONTENT AREA STARTS -->
+
+        <div class="col-12">
+            <section class="box" style="border-left: 3px solid #e77512;">
+                <header class="panel_header">
+                    <h2 class="title pull-left">Eth Campaigns</h2>
+                    <h2 class="title campaign-count pull-right"></h2>
+                </header>
+                <div class="content-body">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="table-responsive" data-pattern="priority-columns">
+                                <table class="table table-small-font no-mb table-bordered table-striped campaign-table">
+                                    <thead>
+                                        <tr>
+                                            <th>ID | Campaign Name</th>
+                                            <th>Tokens</th>
+                                            <th>Activate</th>
+                                            <th>Cancel</th>
+                                            <th>Ready</th>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="dataTables_paginate paging_simple_numbers">
+                                <ul class="pagination">
+                                    <li class="paginate_button page-item previous ">
+                                        <a aria-controls="MCCLMC-crypto-data-list" data-dt-idx="0" tabindex="0" class="page-link">Previous</a>
+                                    </li>
+                                    <li class="paginate_button page-item next pull-right ">
+                                        <a aria-controls="MCCLMC-crypto-data-list" data-dt-idx="8" tabindex="0" class="page-link">Next</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- MAIN CONTENT AREA ENDS -->
+    </div>
+
+<div class="modal fade col-xs-12" id="cmpltadminModal-1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <section class="box" style="border-left: 3px solid #e77512;">
+
+                <header class="panel_header">
+                    <h2 class="title pull-left"></h2>
+                    <button type="button" class="close pull-right" data-dismiss="modal" aria-hidden="true">×</button>
+
+                </header>
+                <div class="content-body">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="table-responsive token-list" data-pattern="priority-columns">
+                                <table class="table table-small-font no-mb table-bordered table-striped modal-table-add ">
+                                    <thead>
+                                        <tr>
+                                            <th>Token Name</th>
+                                            <th>Supply</th>
+                                            <th>Price</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <input type="text" class="token-name">
+                                            </td>
+                                            <td>
+                                                <input type="number" step="1" value="0" class="token-supply">
+                                            </td>
+                                            <td>
+                                                <input type="number" class="token-price">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <button class="btn btn-primary pull-right btn-add-token">Add Token</button>
+                                <table class="table table-small-font no-mb table-bordered table-striped modal-table-certificates">
+                                    <thead>
+                                        <tr>
+                                            <th>Token Name</th>
+                                            <th>Remaining</th>
+                                            <th>Supply</th>
+                                            <th>Price</th>
+                                            <th>Server Data</th>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                            <form id="AddTokenData" class="token-data">
+                                <div class="form-group">
+                                    <img class="mini-image">
+
+                                    <label class="form-label" for="file-1">Token Image (500px x 225px)</label>
+                                    <input name="file" type="file" uid="file-1" />
+                                    <input name="image1" class="image1" type="hidden" uid="file-1" />
+                                    <progress></progress>
+
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="field-1">Description</label>
+                                    <div class="controls">
+                                        <textarea type="text" class="form-control token-description" name="tokenDescription"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="field-1">Link</label>
+                                    <div class="controls">
+                                        <input type="text" class="form-control token-link" name="tokenLink" placeholder="">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="controls">
+                                        <button class="btn btn-primary btn-save-token-data pull-right" type="button">Save Token Data</button>
+                                        <button class="btn btn-primary btn-cancel-token-data pull-right" type="button">Cancel</button>
+                                    </div>
+                                </div>
+                            </form>
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+</section>

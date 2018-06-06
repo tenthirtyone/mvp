@@ -1,0 +1,86 @@
+.campaigns-view .panel_header .title.pull-right {
+  padding-right: 2rem;
+  padding-left: 0; }
+
+.campaigns-view .pagination {
+  width: 100%; }
+
+.campaigns-manage .panel_header .title.pull-right {
+  padding-right: 2rem;
+  padding-left: 0; }
+
+.campaigns-manage .modal-content {
+  background-color: #2f323b; }
+  .campaigns-manage .modal-content .close {
+    margin: 1rem 1.5rem 0 0;
+    font-size: 2rem;
+    color: #fff; }
+  .campaigns-manage .modal-content section.box {
+    margin: 0; }
+    .campaigns-manage .modal-content section.box input {
+      color: #000; }
+      .campaigns-manage .modal-content section.box input.token-supply {
+        width: 5rem;
+        text-align: center; }
+      .campaigns-manage .modal-content section.box input.token-price {
+        width: 5rem;
+        text-align: center; }
+    .campaigns-manage .modal-content section.box .btn-add-token {
+      margin: 1rem 1rem 1rem 0; }
+
+.campaigns-manage .pagination {
+  width: 100%; }
+
+.campaigns-manage .status-active {
+  border: 1px solid #03A9F4;
+  border-radius: 12px;
+  padding: 1px 10px 3px; }
+
+.campaigns-manage .btn {
+  font-weight: bold; }
+
+.campaigns-manage .fa-dot-circle-o {
+  font-size: 20px; }
+  .campaigns-manage .fa-dot-circle-o.active {
+    color: #03A9F4; }
+
+.campaigns-manage th, .campaigns-manage td {
+  font-weight: normal; }
+
+.campaigns-manage .manage-table > tbody > tr > td {
+  vertical-align: middle; }
+
+.campaigns-manage .status-pending, .campaigns-manage .status-cancelled, .campaigns-manage .status-complete {
+  font-size: 1rem; }
+
+.campaigns-eth-manage {
+  display: none; }
+  .campaigns-eth-manage #AddTokenData {
+    display: none; }
+  .campaigns-eth-manage .btn-cancel-token-data {
+    margin-right: 1rem; }
+  .campaigns-eth-manage .mini-image {
+    width: 125px; }
+  .campaigns-eth-manage .campaign-table > tbody > tr > td {
+    vertical-align: middle; }
+  .campaigns-eth-manage .modal-content {
+    background-color: #2f323b; }
+    .campaigns-eth-manage .modal-content .close {
+      margin: 1rem 1.5rem 0 0;
+      font-size: 2rem;
+      color: #fff; }
+    .campaigns-eth-manage .modal-content section.box {
+      margin: 0; }
+      .campaigns-eth-manage .modal-content section.box input {
+        color: #000; }
+        .campaigns-eth-manage .modal-content section.box input.token-supply {
+          width: 5rem;
+          text-align: center; }
+        .campaigns-eth-manage .modal-content section.box input.token-price {
+          width: 5rem;
+          text-align: center; }
+      .campaigns-eth-manage .modal-content section.box .btn-add-token {
+        margin: 1rem 1rem 1rem 0; }
+
+.campaigns-create .mini-image {
+  width: 250px; }

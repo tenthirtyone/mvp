@@ -1,0 +1,72 @@
+.campaigns-manage {
+  .panel_header {
+    .title {
+      &.pull-right {
+        padding-right: 2rem;
+        padding-left: 0;
+      }
+    }
+  }
+  .modal-content {
+    background-color: #2f323b;
+    .close {
+      margin: 1rem 1.5rem 0 0;
+      font-size: 2rem;
+      color: #fff;
+    }
+    section {
+      &.box {
+        margin: 0;
+
+        input {
+          color: #000;
+
+          &.token-name {
+
+          }
+          &.token-supply {
+            width: 5rem;
+            text-align: center;
+          }
+          &.token-price {
+            width: 5rem;
+            text-align: center;
+          }
+        }
+
+        .btn-add-token {
+          margin: 1rem 1rem 1rem 0;
+        }
+      }
+    }
+  }
+  .pagination {
+    width: 100%;
+  }
+  .status-active {
+    border: 1px solid #03A9F4;
+    border-radius: 12px;
+    padding: 1px 10px 3px;
+  }
+  .btn {
+    font-weight: bold;
+  }
+  .fa-dot-circle-o {
+    font-size: 20px;
+    &.active {
+      color: #03A9F4;
+    }
+  }
+  th, td {
+    font-weight: normal;
+  }
+  .manage-table>tbody>tr>td {
+    vertical-align: middle;
+  }
+  .status-pending, .status-cancelled, .status-complete {
+    font-size: 1rem;
+  }
+  .status-complete {
+
+  }
+}

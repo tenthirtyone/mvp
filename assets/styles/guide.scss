@@ -1,0 +1,46 @@
+.guide {
+  section {
+    min-height: 600px;
+    padding: 2rem 0 2rem;
+
+    .text-center {
+      img {
+        margin: 0 0 2rem 0;
+      }
+    }
+
+    .sub-header {
+      padding: 0;
+    }
+    &.dark {
+      background-color: #F4F6FB;
+    }
+  }
+
+  .meta-img {
+    width: 250px;
+    margin-top: 6rem;
+  }
+
+  .lead {
+    text-align: center;
+  }
+  .justified {
+    color: #000;
+  }
+  .text-centered {
+    text-align: center;
+  }
+  .btn-primary {
+    width: 250px;
+  }
+
+  .site-content-iframe {
+    width: 560px;
+  }
+
+  .mm-connected, .mm-disconnected, .mm-not-exists, .mm-exists, .tn-connected, .tn-disconnected, .contract-missing, .contract-found {
+    display: none;
+    font-weight: bold;
+  }
+}

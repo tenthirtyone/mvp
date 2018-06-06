@@ -1,0 +1,12 @@
+.site-header {
+  .logo {
+    @media screen and (min-width: 641px) {
+      padding-left: 1rem;
+    }
+  }
+  .main-nav {
+    .donations {
+      display: none;
+    }
+  }
+}

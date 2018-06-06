@@ -1,0 +1,121 @@
+<section id="main-content" class="charities-edit">
+  <div class="wrapper main-wrapper row" style=''>
+    <div class='col-xs-12'>
+      <div class="page-title">
+        <div class="pull-left">
+          <!-- PAGE HEADING TAG - START -->
+          <h1 class="title">Charities</h1>
+          <!-- PAGE HEADING TAG - END -->
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <!-- MAIN CONTENT AREA STARTS -->
+
+    <div class="col-12">
+      <section class="box" style="border-left: 3px solid #e77512;">
+        <header class="panel_header">
+          <h2 class="title pull-left">Edit Charity</h2>
+        </header>
+        <section class="box ">
+          <div class="content-body">
+            <div class="row">
+              <div class="col-md-8 col-sm-9 col-xs-10">
+                <form id="EditCharity">
+                  <div class="form-group">
+                    <label class="form-label" for="field-1">Charity Name</label>
+                    <div class="controls">
+                      <input type="text" class="form-control" name="charityName" placeholder="" value="{{charity.name}}" id="field-1">
+                      <input type="hidden" class="form-control" name="id" placeholder="" value="{{charity._id}}">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="field-6">Identifier</label>
+                    <span class="desc"></span>
+                    <div class="controls">
+                      <input type="text" class="form-control" name="identifier" placeholder="" value="{{charity.identifier}}" cols="5">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="field-6">Tax ID</label>
+                    <span class="desc"></span>
+                    <div class="controls">
+                      <input type="text" class="form-control" name="taxid" placeholder="" value="{{charity.taxid}}" cols="5">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="field-6">Paypal Address</label>
+                    <span class="desc"></span>
+                    <div class="controls">
+                      <input type="text" class="form-control" name="paypal" placeholder="" value="{{charity.paypal}}" cols="5">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="field-6">Short Description</label>
+                    <span class="desc"></span>
+                    <div class="controls">
+                      <textarea class="form-control" name="shortDescription" placeholder="" cols="5">{{charity.shortDescription}}</textarea>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="field-6">Crypto Campaign Id</label>
+                    <span class="desc"></span>
+                    <div class="controls">
+                      <input type="text" class="form-control" name="cryptoCampaignId" placeholder="" value="{{charity.cryptoCampaignId}}" cols="5">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="field-6">Text1</label>
+                    <span class="desc"></span>
+                    <div class="controls">
+                      <textarea class="form-control" name="text1" placeholder="" cols="5">{{charity.text1}}</textarea>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="field-6">Text2</label>
+                    <span class="desc"></span>
+                    <div class="controls">
+                      <textarea class="form-control" name="text2" placeholder="" cols="5">{{charity.text2}}</textarea>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="field-6">Text3</label>
+                    <span class="desc"></span>
+                    <div class="controls">
+                      <textarea class="form-control" name="text3" placeholder="" cols="5">{{charity.text3}}</textarea>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="field-6">Text4</label>
+                    <span class="desc"></span>
+                    <div class="controls">
+                      <textarea class="form-control" name="text4" placeholder="" cols="5">{{charity.text4}}</textarea>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <div class="controls">
+                      <button class="btn btn-primary btn-edit has-gradient-to-right-bottom" type="button">Update Charity</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      </section>
+    </div>
+
+    <!-- MAIN CONTENT AREA ENDS -->
+  </div>
+</section>
